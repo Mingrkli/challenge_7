@@ -1,0 +1,167 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*### Primary*/
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /*### Neutral*/
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+html {
+    font-family: 'Poppins', -apple-system, sans-serif;
+}
+
+body {
+    padding: 5rem 2rem;
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+}
+
+h1 {
+    color: var(--Very-Dark-Blue);
+}
+
+h2, p {
+    color: var(--Grayish-Blue);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        padding: 4rem 5rem;
+    }
+}
+/* Header
+====================================*/
+header {
+    text-align: center;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.centor {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+
+    }
+
+    header h2 {
+        font-size: 2.2rem;
+        font-weight: 200;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .centor {
+        margin-top: 1rem;
+    }
+
+    header p {
+        width: 54ch;
+    }
+}
+
+/* Main Grid / Flex For Phone
+====================================*/
+.grid-plus-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.box {
+    padding: 1.5rem;
+    max-width: 18rem;
+    max-height: 13rem;
+    box-shadow: 0 5px 30px var(--Grayish-Blue);
+    border-radius: 10px;
+}
+
+.left-box {
+    border-top: 3px solid var(--Cyan);
+}
+
+.top-box {
+    border-top: 3px solid var(--Red);
+}
+
+.bottom-box {
+    border-top: 3px solid var(--Orange);
+}
+
+.right-box {
+    border-top: 3px solid var(--Blue);
+}
+
+.box h1 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.box p {
+    margin-bottom: 2rem;
+    font-size: .8rem;
+}
+
+.image-icon {
+    display: flex;
+    justify-content: end;
+}
+
+.image-icon img {
+    width: 4rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .grid-plus-layout {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+    }
+
+    main .grid-plus-layout:nth-child(2) {
+        display: flex;
+    }
+
+    .left-box {
+        justify-self: end;
+    }
+
+    .right-box {
+        justify-self: start;
+    }
+
+    .bottom-box {
+        margin-top: 2rem;
+    }
+}
